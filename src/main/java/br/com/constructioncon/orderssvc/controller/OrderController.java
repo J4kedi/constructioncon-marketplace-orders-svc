@@ -4,7 +4,6 @@ package br.com.constructioncon.orderssvc.controller;
 import br.com.constructioncon.orderssvc.dto.OrderRequestDTO;
 import br.com.constructioncon.orderssvc.dto.OrderResponseDTO;
 import br.com.constructioncon.orderssvc.service.OrderService;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/orders")
 public class OrderController {
+
     @Autowired
     private OrderService orderService;
 
