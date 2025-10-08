@@ -1,4 +1,4 @@
-package br.com.constructioncon.orders_svc;
+package br.com.constructioncon.orderssvc;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;

@@ -1,9 +1,11 @@
-package br.com.constructioncon.orders_svc;
+package br.com.constructioncon.orderssvc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"br.com.constructioncon.orderssvc"})
 public class OrdersSvcApplication {
 
 	public static void main(String[] args) {
