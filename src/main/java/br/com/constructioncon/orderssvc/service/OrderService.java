@@ -48,6 +48,23 @@ public class OrderService {
             .collect(Collectors.toList());
     }
 
+    @Transactional
+    public OrderResponseDTO updateOrderStatus(Long id, OrderStatus status) {
+        Order order = orderRepository.findById(id)
+            .orElseThrow(() -> new RuntimeException("Order not found with id: " + id));
+        order.setStatus(status);
+        Order updatedOrder = orderRepository.save(order);
+        return toResponseDTO(updatedOrder);
+    }
+
+    @Transactional
+    public void deleteOrder(Long id) {
+        if (!orderRepository.existsById(id)) {
+            throw new RuntimeException("Order not found with id: " + id);
+        }
+        orderRepository.deleteById(id);
+    }
+
     private OrderResponseDTO toResponseDTO(Order order) {
         List<OrderItemDTO> itemDTOs = order.getItems().stream()
             .map(item -> new OrderItemDTO(
