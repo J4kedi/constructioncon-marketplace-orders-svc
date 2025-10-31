@@ -2,6 +2,7 @@ package br.com.constructioncon.orderssvc.controller;
 
 import br.com.constructioncon.orderssvc.dto.OrderRequestDTO;
 import br.com.constructioncon.orderssvc.dto.OrderResponseDTO;
+import br.com.constructioncon.orderssvc.model.OrderStatus;
 import br.com.constructioncon.orderssvc.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
